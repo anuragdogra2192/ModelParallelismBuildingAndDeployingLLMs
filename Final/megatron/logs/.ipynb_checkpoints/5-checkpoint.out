@@ -1,0 +1,327 @@
+[2024-05-09 17:35:12,194] [INFO] [runner.py:378:main] Using IP address of 172.18.0.3 for node slurmnode1
+[2024-05-09 17:35:12,195] [INFO] [multinode_runner.py:65:get_cmd] Running on the following workers: slurmnode1,slurmnode2
+[2024-05-09 17:35:12,195] [INFO] [runner.py:457:main] cmd = pdsh -f 1024 -w slurmnode1,slurmnode2 export NCCL_VERSION=2.11.4; export PYTHONPATH=/dli:/etc/assessment/; export PYTHONIOENCODING=utf-8;  cd /dli; /opt/conda/bin/python3.8 -u -m deepspeed.launcher.launch --world_info=eyJzbHVybW5vZGUxIjogWzAsIDFdLCAic2x1cm1ub2RlMiI6IFswLCAxXX0= --node_rank=%n --master_addr=172.18.0.3 --master_port=29500 /dli/minGPT/minGPT/runStep5.py --deepspeed --deepspeed_config '/dli/minGPT/minGPT/ds_config_step5.json'
+slurmnode1: [2024-05-09 17:35:13,518] [INFO] [launch.py:96:main] 0 NCCL_VERSION=2.11.4
+slurmnode1: [2024-05-09 17:35:13,518] [INFO] [launch.py:103:main] WORLD INFO DICT: {'slurmnode1': [0, 1], 'slurmnode2': [0, 1]}
+slurmnode1: [2024-05-09 17:35:13,518] [INFO] [launch.py:109:main] nnodes=2, num_local_procs=2, node_rank=0
+slurmnode1: [2024-05-09 17:35:13,518] [INFO] [launch.py:122:main] global_rank_mapping=defaultdict(<class 'list'>, {'slurmnode1': [0, 1], 'slurmnode2': [2, 3]})
+slurmnode1: [2024-05-09 17:35:13,518] [INFO] [launch.py:123:main] dist_world_size=4
+slurmnode1: [2024-05-09 17:35:13,518] [INFO] [launch.py:125:main] Setting CUDA_VISIBLE_DEVICES=0,1
+slurmnode2: [2024-05-09 17:35:13,536] [INFO] [launch.py:96:main] 1 NCCL_VERSION=2.11.4
+slurmnode2: [2024-05-09 17:35:13,536] [INFO] [launch.py:103:main] WORLD INFO DICT: {'slurmnode1': [0, 1], 'slurmnode2': [0, 1]}
+slurmnode2: [2024-05-09 17:35:13,536] [INFO] [launch.py:109:main] nnodes=2, num_local_procs=2, node_rank=1
+slurmnode2: [2024-05-09 17:35:13,536] [INFO] [launch.py:122:main] global_rank_mapping=defaultdict(<class 'list'>, {'slurmnode1': [0, 1], 'slurmnode2': [2, 3]})
+slurmnode2: [2024-05-09 17:35:13,536] [INFO] [launch.py:123:main] dist_world_size=4
+slurmnode2: [2024-05-09 17:35:13,536] [INFO] [launch.py:125:main] Setting CUDA_VISIBLE_DEVICES=0,1
+slurmnode1: [2024-05-09 17:35:14,639] [INFO] [distributed.py:48:init_distributed] Initializing torch distributed with backend: nccl
+slurmnode1: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode1: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 2/8, re-initialized 0 dead clusters
+slurmnode1: done step 1/8, re-initialized 4 dead clusters
+slurmnode2: done step 1/8, re-initialized 4 dead clusters
+slurmnode2: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 4/8, re-initialized 0 dead clusters
+slurmnode2: done step 2/8, re-initialized 0 dead clusters
+slurmnode1: done step 2/8, re-initialized 0 dead clusters
+slurmnode2: done step 2/8, re-initialized 0 dead clusters
+slurmnode1: done step 5/8, re-initialized 0 dead clusters
+slurmnode2: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 6/8, re-initialized 0 dead clusters
+slurmnode2: done step 4/8, re-initialized 0 dead clusters
+slurmnode2: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 7/8, re-initialized 0 dead clusters
+slurmnode2: done step 5/8, re-initialized 0 dead clusters
+slurmnode1: done step 8/8, re-initialized 0 dead clusters
+slurmnode2: done step 4/8, re-initialized 0 dead clusters
+slurmnode1: done step 4/8, re-initialized 0 dead clusters
+slurmnode2: done step 6/8, re-initialized 0 dead clusters
+slurmnode1: [2024-05-09 17:35:27,622] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed info: version=0.6.5, git-hash=unknown, git-branch=unknown
+slurmnode2: done step 7/8, re-initialized 0 dead clusters
+slurmnode1: done step 5/8, re-initialized 0 dead clusters
+slurmnode2: done step 5/8, re-initialized 0 dead clusters
+slurmnode2: done step 8/8, re-initialized 0 dead clusters
+slurmnode1: done step 6/8, re-initialized 0 dead clusters
+slurmnode1: done step 7/8, re-initialized 0 dead clusters
+slurmnode2: done step 6/8, re-initialized 0 dead clusters
+slurmnode1: done step 8/8, re-initialized 0 dead clusters
+slurmnode2: done step 7/8, re-initialized 0 dead clusters
+slurmnode2: done step 8/8, re-initialized 0 dead clusters
+slurmnode1: [2024-05-09 17:35:36,093] [INFO] [engine.py:278:__init__] DeepSpeed Flops Profiler Enabled: False
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Detected CUDA files, patching ldflags
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/cpu_adam/build.ninja...
+slurmnode2: Building extension module cpu_adam...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module cpu_adam...
+slurmnode2: Time to load cpu_adam op: 2.4515388011932373 seconds
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: Detected CUDA files, patching ldflags
+slurmnode1: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/cpu_adam/build.ninja...
+slurmnode1: Building extension module cpu_adam...
+slurmnode1: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode1: ninja: no work to do.
+slurmnode1: Loading extension module cpu_adam...
+slurmnode1: Time to load cpu_adam op: 2.452399253845215 seconds
+slurmnode2: Loading extension module cpu_adam...
+slurmnode2: Time to load cpu_adam op: 2.559166669845581 seconds
+slurmnode1: Loading extension module cpu_adam...
+slurmnode1: Time to load cpu_adam op: 2.591381072998047 seconds
+slurmnode2: Adam Optimizer #0 is created with AVX2 arithmetic capability.
+slurmnode2: Config: alpha=0.000300, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/utils/build.ninja...
+slurmnode2: Building extension module utils...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module utils...
+slurmnode2: Time to load utils op: 0.05975174903869629 seconds
+slurmnode1: Adam Optimizer #0 is created with AVX2 arithmetic capability.
+slurmnode1: Config: alpha=0.000300, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: Adam Optimizer #0 is created with AVX2 arithmetic capability.
+slurmnode1: Config: alpha=0.000300, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+slurmnode1: [2024-05-09 17:35:40,073] [INFO] [engine.py:1100:_configure_optimizer] Using DeepSpeed Optimizer param name adam as basic optimizer
+slurmnode2: Adam Optimizer #0 is created with AVX2 arithmetic capability.
+slurmnode2: Config: alpha=0.000300, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+slurmnode1: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/utils/build.ninja...
+slurmnode1: [2024-05-09 17:35:40,089] [INFO] [engine.py:1108:_configure_optimizer] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+slurmnode1: [2024-05-09 17:35:40,089] [INFO] [utils.py:52:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+slurmnode1: [2024-05-09 17:35:40,089] [INFO] [logging.py:69:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer
+slurmnode1: [2024-05-09 17:35:40,089] [INFO] [engine.py:1410:_configure_zero_optimizer] Initializing ZeRO Stage 3
+slurmnode1: Building extension module utils...
+slurmnode1: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode1: [2024-05-09 17:35:40,095] [INFO] [stage3.py:275:__init__] Reduce bucket size 500000000.0
+slurmnode1: [2024-05-09 17:35:40,095] [INFO] [stage3.py:276:__init__] Prefetch bucket size 940000.0
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: ninja: no work to do.
+slurmnode1: Loading extension module utils...
+slurmnode1: Time to load utils op: 0.06837654113769531 seconds
+slurmnode1: Loading extension module utils...
+slurmnode2: Loading extension module utils...
+slurmnode2: Time to load utils op: 0.1017446517944336 seconds
+slurmnode1: Time to load utils op: 0.10220551490783691 seconds
+slurmnode1: [2024-05-09 17:35:40,752] [INFO] [stage3.py:567:_setup_for_real_optimizer] optimizer state initialized
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: No modifications detected for re-loaded extension module utils, skipping build step...
+slurmnode1: Loading extension module utils...
+slurmnode1: Time to load utils op: 0.0005817413330078125 seconds
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: No modifications detected for re-loaded extension module utils, skipping build step...No modifications detected for re-loaded extension module utils, skipping build step...
+slurmnode2: 
+slurmnode2: Loading extension module utils...
+slurmnode2: Loading extension module utils...
+slurmnode2: Time to load utils op: 0.0005533695220947266 seconds
+slurmnode2: Time to load utils op: 0.0006434917449951172 seconds
+slurmnode1: [2024-05-09 17:35:42,931] [INFO] [utils.py:828:see_memory_usage] After initializing ZeRO optimizer
+slurmnode1: [2024-05-09 17:35:42,932] [INFO] [utils.py:829:see_memory_usage] MA 0.98 GB         Max_MA 0.98 GB         CA 1.03 GB         Max_CA 1 GB 
+slurmnode1: [2024-05-09 17:35:42,933] [INFO] [utils.py:837:see_memory_usage] CPU Virtual Memory:  used = 26.89 GB, percent = 3.1%
+slurmnode1: [2024-05-09 17:35:42,933] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed Final Optimizer = adam
+slurmnode1: [2024-05-09 17:35:42,933] [INFO] [engine.py:795:_configure_lr_scheduler] DeepSpeed using client LR scheduler
+slurmnode1: [2024-05-09 17:35:42,933] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+slurmnode1: [2024-05-09 17:35:42,933] [INFO] [logging.py:69:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:35:42,934] [INFO] [config.py:1059:print] DeepSpeedEngine configuration:
+slurmnode1: [2024-05-09 17:35:42,934] [INFO] [config.py:1063:print]   activation_checkpointing_config  {
+slurmnode1:     "partition_activations": true, 
+slurmnode1:     "contiguous_memory_optimization": true, 
+slurmnode1:     "cpu_checkpointing": true, 
+slurmnode1:     "number_checkpoints": 24, 
+slurmnode1:     "synchronize_checkpoint_boundary": true, 
+slurmnode1:     "profile": true
+slurmnode1: }
+slurmnode1: [2024-05-09 17:35:42,934] [INFO] [config.py:1063:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+slurmnode1: [2024-05-09 17:35:42,934] [INFO] [config.py:1063:print]   amp_enabled .................. False
+slurmnode1: [2024-05-09 17:35:42,934] [INFO] [config.py:1063:print]   amp_params ................... False
+slurmnode1: [2024-05-09 17:35:42,934] [INFO] [config.py:1063:print]   autotuning_config ............ {
+slurmnode1:     "enabled": false, 
+slurmnode1:     "start_step": null, 
+slurmnode1:     "end_step": null, 
+slurmnode1:     "metric_path": null, 
+slurmnode1:     "arg_mappings": null, 
+slurmnode1:     "metric": "throughput", 
+slurmnode1:     "model_info": null, 
+slurmnode1:     "results_dir": null, 
+slurmnode1:     "exps_dir": null, 
+slurmnode1:     "overwrite": true, 
+slurmnode1:     "fast": true, 
+slurmnode1:     "start_profile_step": 3, 
+slurmnode1:     "end_profile_step": 5, 
+slurmnode1:     "tuner_type": "gridsearch", 
+slurmnode1:     "tuner_early_stopping": 5, 
+slurmnode1:     "tuner_num_trials": 50, 
+slurmnode1:     "model_info_path": null, 
+slurmnode1:     "mp_size": 1, 
+slurmnode1:     "max_train_batch_size": null, 
+slurmnode1:     "min_train_batch_size": 1, 
+slurmnode1:     "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+slurmnode1:     "min_train_micro_batch_size_per_gpu": 1, 
+slurmnode1:     "num_tuning_micro_batch_sizes": 3
+slurmnode1: }
+slurmnode1: [2024-05-09 17:35:42,934] [INFO] [config.py:1063:print]   bfloat16_enabled ............. False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   checkpoint_tag_validation_enabled  True
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   checkpoint_tag_validation_fail  False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   communication_data_type ...... None
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   curriculum_enabled ........... False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   curriculum_params ............ False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   dataloader_drop_last ......... False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   disable_allgather ............ False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   dump_state ................... False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   dynamic_loss_scale_args ...... None
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_enabled ........... False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_gas_boundary_resolution  1
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_layer_name ........ bert.encoder.layer
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_layer_num ......... 0
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_max_iter .......... 100
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_stability ......... 1e-06
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_tol ............... 0.01
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   eigenvalue_verbose ........... False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   elasticity_enabled ........... False
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   flops_profiler_config ........ {
+slurmnode1:     "enabled": false, 
+slurmnode1:     "profile_step": 1, 
+slurmnode1:     "module_depth": -1, 
+slurmnode1:     "top_modules": 1, 
+slurmnode1:     "detailed": true, 
+slurmnode1:     "output_file": null
+slurmnode1: }
+slurmnode1: [2024-05-09 17:35:42,935] [INFO] [config.py:1063:print]   fp16_enabled ................. True
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   fp16_master_weights_and_gradients  False
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   fp16_mixed_quantize .......... False
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   global_rank .................. 0
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   gradient_accumulation_steps .. 4
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   gradient_clipping ............ 1.0
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   gradient_predivide_factor .... 1.0
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   initial_dynamic_scale ........ 4294967296
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   loss_scale ................... 0
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   memory_breakdown ............. False
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   optimizer_legacy_fusion ...... False
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   optimizer_name ............... adam
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   optimizer_params ............. {'lr': 0.0003}
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   pld_enabled .................. False
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   pld_params ................... False
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   prescale_gradients ........... False
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   quantize_change_rate ......... 0.001
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   quantize_groups .............. 1
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   quantize_offset .............. 1000
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   quantize_period .............. 1000
+slurmnode1: [2024-05-09 17:35:42,936] [INFO] [config.py:1063:print]   quantize_rounding ............ 0
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   quantize_start_bits .......... 16
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   quantize_target_bits ......... 8
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   quantize_training_enabled .... False
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   quantize_type ................ 0
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   quantize_verbose ............. False
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   scheduler_name ............... None
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   scheduler_params ............. None
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   sparse_attention ............. None
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   sparse_gradients_enabled ..... False
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   steps_per_print .............. 10
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   tensorboard_enabled .......... False
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   tensorboard_job_name ......... DeepSpeedJobName
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   tensorboard_output_path ...... 
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   train_batch_size ............. 2048
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   train_micro_batch_size_per_gpu  128
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   use_quantizer_kernel ......... False
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   wall_clock_breakdown ......... False
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   world_size ................... 4
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   zero_allow_untested_optimizer  False
+slurmnode1: [2024-05-09 17:35:42,937] [INFO] [config.py:1063:print]   zero_config .................. {
+slurmnode1:     "stage": 3, 
+slurmnode1:     "contiguous_gradients": true, 
+slurmnode1:     "reduce_scatter": true, 
+slurmnode1:     "reduce_bucket_size": 5.000000e+08, 
+slurmnode1:     "allgather_partitions": true, 
+slurmnode1:     "allgather_bucket_size": 5.000000e+08, 
+slurmnode1:     "overlap_comm": true, 
+slurmnode1:     "load_from_fp32_weights": true, 
+slurmnode1:     "elastic_checkpoint": false, 
+slurmnode1:     "offload_param": {
+slurmnode1:         "device": "cpu", 
+slurmnode1:         "nvme_path": null, 
+slurmnode1:         "buffer_count": 5, 
+slurmnode1:         "buffer_size": 1.000000e+08, 
+slurmnode1:         "max_in_cpu": 1.000000e+09, 
+slurmnode1:         "pin_memory": false
+slurmnode1:     }, 
+slurmnode1:     "offload_optimizer": {
+slurmnode1:         "device": "cpu", 
+slurmnode1:         "nvme_path": null, 
+slurmnode1:         "buffer_count": 4, 
+slurmnode1:         "pin_memory": false, 
+slurmnode1:         "pipeline_read": false, 
+slurmnode1:         "pipeline_write": false, 
+slurmnode1:         "fast_init": false, 
+slurmnode1:         "pipeline": false
+slurmnode1:     }, 
+slurmnode1:     "sub_group_size": 1.000000e+09, 
+slurmnode1:     "prefetch_bucket_size": 9.400000e+05, 
+slurmnode1:     "param_persistence_threshold": 1.000000e+05, 
+slurmnode1:     "max_live_parameters": 1.000000e+09, 
+slurmnode1:     "max_reuse_distance": 1.000000e+09, 
+slurmnode1:     "gather_16bit_weights_on_model_save": false, 
+slurmnode1:     "ignore_unused_parameters": true, 
+slurmnode1:     "round_robin_gradients": false, 
+slurmnode1:     "legacy_stage1": false
+slurmnode1: }
+slurmnode1: [2024-05-09 17:35:42,938] [INFO] [config.py:1063:print]   zero_enabled ................. True
+slurmnode1: [2024-05-09 17:35:42,938] [INFO] [config.py:1063:print]   zero_optimization_stage ...... 3
+slurmnode1: [2024-05-09 17:35:42,938] [INFO] [config.py:1065:print]   json = {
+slurmnode1:     "train_micro_batch_size_per_gpu": 128, 
+slurmnode1:     "gradient_accumulation_steps": 4, 
+slurmnode1:     "optimizer": {
+slurmnode1:         "type": "Adam", 
+slurmnode1:         "params": {
+slurmnode1:             "lr": 0.0003
+slurmnode1:         }
+slurmnode1:     }, 
+slurmnode1:     "gradient_clipping": 1.0, 
+slurmnode1:     "activation_checkpointing": {
+slurmnode1:         "partition_activations": true, 
+slurmnode1:         "cpu_checkpointing": true, 
+slurmnode1:         "contiguous_memory_optimization": true, 
+slurmnode1:         "number_checkpoints": 24, 
+slurmnode1:         "synchronize_checkpoint_boundary": true, 
+slurmnode1:         "profile": true
+slurmnode1:     }, 
+slurmnode1:     "fp16": {
+slurmnode1:         "enabled": true
+slurmnode1:     }, 
+slurmnode1:     "zero_optimization": {
+slurmnode1:         "stage": 3, 
+slurmnode1:         "stage3_max_live_parameters": 1.000000e+09, 
+slurmnode1:         "stage3_max_reuse_distance": 1.000000e+09, 
+slurmnode1:         "stage3_prefetch_bucket_size": 9.400000e+05, 
+slurmnode1:         "stage3_param_persitence_threshold": 1.000000e+04, 
+slurmnode1:         "reduce_bucket_size": 5.000000e+08, 
+slurmnode1:         "contiguous_gradients": true, 
+slurmnode1:         "offload_optimizer": {
+slurmnode1:             "device": "cpu"
+slurmnode1:         }, 
+slurmnode1:         "offload_param": {
+slurmnode1:             "device": "cpu"
+slurmnode1:         }
+slurmnode1:     }
+slurmnode1: }
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: No modifications detected for re-loaded extension module utils, skipping build step...
+slurmnode1: Loading extension module utils...
+slurmnode1: Time to load utils op: 0.0004322528839111328 seconds
+slurmnode1: [2024-05-09 17:35:44,552] [INFO] [checkpointing.py:547:forward] Activation Checkpointing Information
+slurmnode1: [2024-05-09 17:35:44,553] [INFO] [checkpointing.py:548:forward] ----Partition Activations False, CPU CHECKPOINTING False
+slurmnode1: [2024-05-09 17:35:44,553] [INFO] [checkpointing.py:551:forward] ----contiguous Memory Checkpointing False with None total layers
+slurmnode1: [2024-05-09 17:35:44,553] [INFO] [checkpointing.py:554:forward] ----Synchronization False
+slurmnode1: [2024-05-09 17:35:44,553] [INFO] [checkpointing.py:555:forward] ----Profiling time in checkpointing False
+slurmnode1: [2024-05-09 17:36:25,121] [INFO] [stage3.py:2281:_overflow_clean_up] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 4294967296, reducing to 2147483648.0

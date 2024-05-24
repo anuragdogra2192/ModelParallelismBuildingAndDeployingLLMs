@@ -1,0 +1,17 @@
+Get Started with the Nemo Framework
+https://www.nvidia.com/en-us/ai-data-science/products/nemo/
+
+Get Access to Nemo-LLM
+https://developer.nvidia.com/nemo-microservices
+
+Get Started with TensorRT-LLM
+https://github.com/NVIDIA/TensorRT-LLM
+
+Check out the Nemo Framework Documentation
+https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html
+
+	Including the Nemo Launcher Quick Start Guide
+	https://docs.nvidia.com/nemo-framework/user-guide/latest/launcherguide/quickstart.html#installation-steps
+
+	And the Model Training Guide
+	https://docs.nvidia.com/nemo-framework/user-guide/latest/modelguide/trainingnemo.html

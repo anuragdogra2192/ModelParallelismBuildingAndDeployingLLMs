@@ -1,0 +1,13 @@
+slurmnode1: 05/09/2024 17:35:27 - INFO - mingpt.model -   number of parameters: 1.947878e+07
+slurmnode1: 05/09/2024 17:35:29 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:2 to store for rank: 0
+slurmnode2: 05/09/2024 17:35:30 - INFO - mingpt.model -   number of parameters: 1.947878e+07
+slurmnode2: 05/09/2024 17:35:31 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:2 to store for rank: 2
+slurmnode1: 05/09/2024 17:35:33 - INFO - mingpt.model -   number of parameters: 1.947878e+07
+slurmnode2: 05/09/2024 17:35:34 - INFO - mingpt.model -   number of parameters: 1.947878e+07
+slurmnode1: 05/09/2024 17:35:35 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:2 to store for rank: 1
+slurmnode2: 05/09/2024 17:35:35 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:2 to store for rank: 3
+slurmnode2: 05/09/2024 17:35:35 - INFO - torch.distributed.distributed_c10d -   Rank 3: Completed store-based barrier for key:store_based_barrier_key:2 with 4 nodes.
+slurmnode1: 05/09/2024 17:35:35 - INFO - torch.distributed.distributed_c10d -   Rank 1: Completed store-based barrier for key:store_based_barrier_key:2 with 4 nodes.
+slurmnode1: 05/09/2024 17:35:35 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:2 with 4 nodes.
+slurmnode2: 05/09/2024 17:35:35 - INFO - torch.distributed.distributed_c10d -   Rank 2: Completed store-based barrier for key:store_based_barrier_key:2 with 4 nodes.
+slurmstepd-slurmnode1: error: *** JOB 5 ON slurmnode1 CANCELLED AT 2024-05-09T17:41:50 ***

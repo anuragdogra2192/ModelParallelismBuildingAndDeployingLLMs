@@ -1,0 +1,370 @@
+[2024-05-09 17:00:03,598] [INFO] [runner.py:378:main] Using IP address of 172.18.0.3 for node slurmnode1
+[2024-05-09 17:00:03,598] [INFO] [multinode_runner.py:65:get_cmd] Running on the following workers: slurmnode1,slurmnode2
+[2024-05-09 17:00:03,598] [INFO] [runner.py:457:main] cmd = pdsh -f 1024 -w slurmnode1,slurmnode2 export NCCL_VERSION=2.11.4; export PYTHONPATH=/dli:/etc/assessment/; export PYTHONIOENCODING=utf-8;  cd /dli; /opt/conda/bin/python3.8 -u -m deepspeed.launcher.launch --world_info=eyJzbHVybW5vZGUxIjogWzAsIDFdLCAic2x1cm1ub2RlMiI6IFswLCAxXX0= --node_rank=%n --master_addr=172.18.0.3 --master_port=29500 /dli/minGPT/minGPT/runFirstDeepSpeed.py --deepspeed --deepspeed_config 'minGPT/minGPT/ds_config_basic.json'
+slurmnode1: [2024-05-09 17:00:04,908] [INFO] [launch.py:96:main] 0 NCCL_VERSION=2.11.4
+slurmnode1: [2024-05-09 17:00:04,908] [INFO] [launch.py:103:main] WORLD INFO DICT: {'slurmnode1': [0, 1], 'slurmnode2': [0, 1]}
+slurmnode1: [2024-05-09 17:00:04,908] [INFO] [launch.py:109:main] nnodes=2, num_local_procs=2, node_rank=0
+slurmnode1: [2024-05-09 17:00:04,908] [INFO] [launch.py:122:main] global_rank_mapping=defaultdict(<class 'list'>, {'slurmnode1': [0, 1], 'slurmnode2': [2, 3]})
+slurmnode1: [2024-05-09 17:00:04,908] [INFO] [launch.py:123:main] dist_world_size=4
+slurmnode1: [2024-05-09 17:00:04,908] [INFO] [launch.py:125:main] Setting CUDA_VISIBLE_DEVICES=0,1
+slurmnode2: [2024-05-09 17:00:05,016] [INFO] [launch.py:96:main] 1 NCCL_VERSION=2.11.4
+slurmnode2: [2024-05-09 17:00:05,016] [INFO] [launch.py:103:main] WORLD INFO DICT: {'slurmnode1': [0, 1], 'slurmnode2': [0, 1]}
+slurmnode2: [2024-05-09 17:00:05,016] [INFO] [launch.py:109:main] nnodes=2, num_local_procs=2, node_rank=1
+slurmnode2: [2024-05-09 17:00:05,016] [INFO] [launch.py:122:main] global_rank_mapping=defaultdict(<class 'list'>, {'slurmnode1': [0, 1], 'slurmnode2': [2, 3]})
+slurmnode2: [2024-05-09 17:00:05,016] [INFO] [launch.py:123:main] dist_world_size=4
+slurmnode2: [2024-05-09 17:00:05,016] [INFO] [launch.py:125:main] Setting CUDA_VISIBLE_DEVICES=0,1
+slurmnode1: [2024-05-09 17:00:06,067] [INFO] [distributed.py:48:init_distributed] Initializing torch distributed with backend: nccl
+slurmnode2: Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./cifar-10-python.tar.gz
+slurmnode1: Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./cifar-10-python.tar.gz
+slurmnode2: Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./cifar-10-python.tar.gz
+slurmnode1: Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./cifar-10-python.tar.gz
+slurmnode1: Extracting ./cifar-10-python.tar.gz to ./
+slurmnode1: Extracting ./cifar-10-python.tar.gz to ./
+slurmnode2: Extracting ./cifar-10-python.tar.gz to ./
+slurmnode2: Extracting ./cifar-10-python.tar.gz to ./
+slurmnode1: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode1: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 1/8, re-initialized 4 dead clusters
+slurmnode2: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 2/8, re-initialized 0 dead clusters
+slurmnode2: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 3/8, re-initialized 0 dead clusters
+slurmnode2: done step 2/8, re-initialized 0 dead clusters
+slurmnode1: done step 2/8, re-initialized 0 dead clusters
+slurmnode1: done step 4/8, re-initialized 0 dead clusters
+slurmnode2: done step 2/8, re-initialized 0 dead clusters
+slurmnode1: done step 5/8, re-initialized 0 dead clusters
+slurmnode2: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 6/8, re-initialized 0 dead clusters
+slurmnode1: done step 7/8, re-initialized 0 dead clusters
+slurmnode2: done step 3/8, re-initialized 0 dead clusters
+slurmnode2: done step 4/8, re-initialized 0 dead clusters
+slurmnode1: done step 8/8, re-initialized 0 dead clusters
+slurmnode1: done step 4/8, re-initialized 0 dead clusters
+slurmnode1: done step 5/8, re-initialized 0 dead clusters
+slurmnode2: done step 4/8, re-initialized 0 dead clusters
+slurmnode2: done step 5/8, re-initialized 0 dead clusters
+slurmnode1: done step 6/8, re-initialized 0 dead clusters
+slurmnode2: done step 6/8, re-initialized 0 dead clusters
+slurmnode2: done step 5/8, re-initialized 0 dead clusters
+slurmnode1: done step 7/8, re-initialized 0 dead clusters
+slurmnode2: done step 7/8, re-initialized 0 dead clusters
+slurmnode1: done step 8/8, re-initialized 0 dead clusters
+slurmnode1: [2024-05-09 17:00:37,008] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed info: version=0.6.5, git-hash=unknown, git-branch=unknown
+slurmnode2: done step 8/8, re-initialized 0 dead clusters
+slurmnode2: done step 6/8, re-initialized 0 dead clusters
+slurmnode2: done step 7/8, re-initialized 0 dead clusters
+slurmnode2: done step 8/8, re-initialized 0 dead clusters
+slurmnode1: [2024-05-09 17:00:40,743] [INFO] [engine.py:278:__init__] DeepSpeed Flops Profiler Enabled: False
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Detected CUDA files, patching ldflags
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/fused_adam/build.ninja...
+slurmnode2: Building extension module fused_adam...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module fused_adam...
+slurmnode2: Time to load fused_adam op: 0.044300079345703125 seconds
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/utils/build.ninja...
+slurmnode2: Building extension module utils...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module utils...
+slurmnode2: Time to load utils op: 0.042110443115234375 seconds
+slurmnode1: Loading extension module fused_adam...
+slurmnode1: Time to load fused_adam op: 0.10301733016967773 seconds
+slurmnode1: [2024-05-09 17:00:41,304] [INFO] [engine.py:1100:_configure_optimizer] Using DeepSpeed Optimizer param name adam as basic optimizer
+slurmnode1: [2024-05-09 17:00:41,309] [INFO] [engine.py:1108:_configure_optimizer] DeepSpeed Basic Optimizer = FusedAdam
+slurmnode1: [2024-05-09 17:00:41,310] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed Final Optimizer = adam
+slurmnode1: [2024-05-09 17:00:41,310] [INFO] [engine.py:795:_configure_lr_scheduler] DeepSpeed using client LR scheduler
+slurmnode1: [2024-05-09 17:00:41,310] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+slurmnode1: [2024-05-09 17:00:41,310] [INFO] [logging.py:69:log_dist] [Rank 0] step=0, skipped=0, lr=[0.003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:00:41,310] [INFO] [config.py:1059:print] DeepSpeedEngine configuration:
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   activation_checkpointing_config  {
+slurmnode1:     "partition_activations": false, 
+slurmnode1:     "contiguous_memory_optimization": false, 
+slurmnode1:     "cpu_checkpointing": false, 
+slurmnode1:     "number_checkpoints": null, 
+slurmnode1:     "synchronize_checkpoint_boundary": false, 
+slurmnode1:     "profile": false
+slurmnode1: }
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   amp_enabled .................. False
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   amp_params ................... False
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   autotuning_config ............ {
+slurmnode1:     "enabled": false, 
+slurmnode1:     "start_step": null, 
+slurmnode1:     "end_step": null, 
+slurmnode1:     "metric_path": null, 
+slurmnode1:     "arg_mappings": null, 
+slurmnode1:     "metric": "throughput", 
+slurmnode1:     "model_info": null, 
+slurmnode1:     "results_dir": null, 
+slurmnode1:     "exps_dir": null, 
+slurmnode1:     "overwrite": true, 
+slurmnode1:     "fast": true, 
+slurmnode1:     "start_profile_step": 3, 
+slurmnode1:     "end_profile_step": 5, 
+slurmnode1:     "tuner_type": "gridsearch", 
+slurmnode1:     "tuner_early_stopping": 5, 
+slurmnode1:     "tuner_num_trials": 50, 
+slurmnode1:     "model_info_path": null, 
+slurmnode1:     "mp_size": 1, 
+slurmnode1:     "max_train_batch_size": null, 
+slurmnode1:     "min_train_batch_size": 1, 
+slurmnode1:     "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+slurmnode1:     "min_train_micro_batch_size_per_gpu": 1, 
+slurmnode1:     "num_tuning_micro_batch_sizes": 3
+slurmnode1: }
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   bfloat16_enabled ............. False
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   checkpoint_tag_validation_enabled  True
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   checkpoint_tag_validation_fail  False
+slurmnode1: [2024-05-09 17:00:41,311] [INFO] [config.py:1063:print]   communication_data_type ...... None
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   curriculum_enabled ........... False
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   curriculum_params ............ False
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   dataloader_drop_last ......... False
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   disable_allgather ............ False
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   dump_state ................... False
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   dynamic_loss_scale_args ...... None
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_enabled ........... False
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_gas_boundary_resolution  1
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_layer_name ........ bert.encoder.layer
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_layer_num ......... 0
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_max_iter .......... 100
+slurmnode1: Loading extension module fused_adam...
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_stability ......... 1e-06
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_tol ............... 0.01
+slurmnode1: [2024-05-09 17:00:41,312] [INFO] [config.py:1063:print]   eigenvalue_verbose ........... False
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   elasticity_enabled ........... False
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   flops_profiler_config ........ {
+slurmnode1:     "enabled": false, 
+slurmnode1:     "profile_step": 1, 
+slurmnode1:     "module_depth": -1, 
+slurmnode1:     "top_modules": 1, 
+slurmnode1:     "detailed": true, 
+slurmnode1:     "output_file": null
+slurmnode1: }
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   fp16_enabled ................. False
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   fp16_master_weights_and_gradients  False
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   fp16_mixed_quantize .......... False
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   global_rank .................. 0
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   gradient_accumulation_steps .. 1
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   gradient_clipping ............ 1.0
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   gradient_predivide_factor .... 1.0
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   initial_dynamic_scale ........ 4294967296
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   loss_scale ................... 0
+slurmnode1: Time to load fused_adam op: 0.10206294059753418 seconds[2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   memory_breakdown ............. False
+slurmnode1: 
+slurmnode1: [2024-05-09 17:00:41,313] [INFO] [config.py:1063:print]   optimizer_legacy_fusion ...... False
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   optimizer_name ............... adam
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   optimizer_params ............. {'lr': 0.003}
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   pld_enabled .................. False
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   pld_params ................... False
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   prescale_gradients ........... False
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_change_rate ......... 0.001
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_groups .............. 1
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_offset .............. 1000
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_period .............. 1000
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_rounding ............ 0
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_start_bits .......... 16
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_target_bits ......... 8
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_training_enabled .... False
+slurmnode1: [2024-05-09 17:00:41,314] [INFO] [config.py:1063:print]   quantize_type ................ 0
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   quantize_verbose ............. False
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   scheduler_name ............... None
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   scheduler_params ............. None
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   sparse_attention ............. None
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   sparse_gradients_enabled ..... False
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   steps_per_print .............. 10
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   tensorboard_enabled .......... False
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   tensorboard_job_name ......... DeepSpeedJobName
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   tensorboard_output_path ...... 
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   train_batch_size ............. 32
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   train_micro_batch_size_per_gpu  8
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   use_quantizer_kernel ......... False
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   wall_clock_breakdown ......... False
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   world_size ................... 4
+slurmnode1: [2024-05-09 17:00:41,315] [INFO] [config.py:1063:print]   zero_allow_untested_optimizer  False
+slurmnode1: [2024-05-09 17:00:41,316] [INFO] [config.py:1063:print]   zero_config .................. {
+slurmnode1:     "stage": 0, 
+slurmnode1:     "contiguous_gradients": true, 
+slurmnode1:     "reduce_scatter": true, 
+slurmnode1:     "reduce_bucket_size": 5.000000e+08, 
+slurmnode1:     "allgather_partitions": true, 
+slurmnode1:     "allgather_bucket_size": 5.000000e+08, 
+slurmnode1:     "overlap_comm": false, 
+slurmnode1:     "load_from_fp32_weights": true, 
+slurmnode1:     "elastic_checkpoint": false, 
+slurmnode1:     "offload_param": null, 
+slurmnode1:     "offload_optimizer": null, 
+slurmnode1:     "sub_group_size": 1.000000e+09, 
+slurmnode1:     "prefetch_bucket_size": 5.000000e+07, 
+slurmnode1:     "param_persistence_threshold": 1.000000e+05, 
+slurmnode1:     "max_live_parameters": 1.000000e+09, 
+slurmnode1:     "max_reuse_distance": 1.000000e+09, 
+slurmnode1:     "gather_16bit_weights_on_model_save": false, 
+slurmnode1:     "ignore_unused_parameters": true, 
+slurmnode1:     "round_robin_gradients": false, 
+slurmnode1:     "legacy_stage1": false
+slurmnode1: }
+slurmnode1: [2024-05-09 17:00:41,316] [INFO] [config.py:1063:print]   zero_enabled ................. False
+slurmnode1: [2024-05-09 17:00:41,316] [INFO] [config.py:1063:print]   zero_optimization_stage ...... 0
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Loading extension module fused_adam...
+slurmnode2: Time to load fused_adam op: 0.10210657119750977 seconds
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/utils/build.ninja...
+slurmnode2: Building extension module utils...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode1: [2024-05-09 17:00:41,381] [INFO] [config.py:1065:print]   json = {
+slurmnode1:     "train_micro_batch_size_per_gpu": 8, 
+slurmnode1:     "optimizer": {
+slurmnode1:         "type": "Adam", 
+slurmnode1:         "params": {
+slurmnode1:             "lr": 0.003
+slurmnode1:         }
+slurmnode1:     }, 
+slurmnode1:     "gradient_clipping": 1.0
+slurmnode1: }
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module utils...
+slurmnode2: Time to load utils op: 0.07179951667785645 seconds
+slurmnode1: Loading extension module utils...
+slurmnode1: Time to load utils op: 0.1016538143157959 seconds
+slurmnode1: Loading extension module utils...
+slurmnode1: Time to load utils op: 0.10204029083251953 seconds
+slurmnode1: [2024-05-09 17:00:46,333] [INFO] [logging.py:69:log_dist] [Rank 0] step=10, skipped=0, lr=[4.32e-06], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:00:46,333] [INFO] [timer.py:193:stop] 0/10, SamplesPerSec=99.9105542730825, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:00:49,590] [INFO] [logging.py:69:log_dist] [Rank 0] step=20, skipped=0, lr=[9.12e-06], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:00:49,590] [INFO] [timer.py:193:stop] 0/20, SamplesPerSec=99.1331835726547, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:00:52,983] [INFO] [logging.py:69:log_dist] [Rank 0] step=30, skipped=0, lr=[1.392e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:00:52,984] [INFO] [timer.py:193:stop] 0/30, SamplesPerSec=97.43307970962265, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:00:56,287] [INFO] [logging.py:69:log_dist] [Rank 0] step=40, skipped=0, lr=[1.872e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:00:56,287] [INFO] [timer.py:193:stop] 0/40, SamplesPerSec=97.34503866881427, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:00:59,552] [INFO] [logging.py:69:log_dist] [Rank 0] step=50, skipped=0, lr=[2.352e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:00:59,553] [INFO] [timer.py:193:stop] 0/50, SamplesPerSec=97.52471597119902, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:02,900] [INFO] [logging.py:69:log_dist] [Rank 0] step=60, skipped=0, lr=[2.8320000000000003e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:02,901] [INFO] [timer.py:193:stop] 0/60, SamplesPerSec=97.24020279091836, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:06,142] [INFO] [logging.py:69:log_dist] [Rank 0] step=70, skipped=0, lr=[3.312e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:06,143] [INFO] [timer.py:193:stop] 0/70, SamplesPerSec=97.5032660497674, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:09,381] [INFO] [logging.py:69:log_dist] [Rank 0] step=80, skipped=0, lr=[3.792e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:09,382] [INFO] [timer.py:193:stop] 0/80, SamplesPerSec=97.71068121182164, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:12,561] [INFO] [logging.py:69:log_dist] [Rank 0] step=90, skipped=0, lr=[4.272e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:12,561] [INFO] [timer.py:193:stop] 0/90, SamplesPerSec=98.06752766536223, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:15,765] [INFO] [logging.py:69:log_dist] [Rank 0] step=100, skipped=0, lr=[4.752e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:15,765] [INFO] [timer.py:193:stop] 0/100, SamplesPerSec=98.27177195688134, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:18,976] [INFO] [logging.py:69:log_dist] [Rank 0] step=110, skipped=0, lr=[5.232e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:18,977] [INFO] [timer.py:193:stop] 0/110, SamplesPerSec=98.42391142333564, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:22,219] [INFO] [logging.py:69:log_dist] [Rank 0] step=120, skipped=0, lr=[5.712e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:22,220] [INFO] [timer.py:193:stop] 0/120, SamplesPerSec=98.46684735562378, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:25,412] [INFO] [logging.py:69:log_dist] [Rank 0] step=130, skipped=0, lr=[6.192e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:25,412] [INFO] [timer.py:193:stop] 0/130, SamplesPerSec=98.62301975825063, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:28,612] [INFO] [logging.py:69:log_dist] [Rank 0] step=140, skipped=0, lr=[6.672e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:28,612] [INFO] [timer.py:193:stop] 0/140, SamplesPerSec=98.74629552511614, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:31,869] [INFO] [logging.py:69:log_dist] [Rank 0] step=150, skipped=0, lr=[7.152e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:31,869] [INFO] [timer.py:193:stop] 0/150, SamplesPerSec=98.72966238707593, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:35,082] [INFO] [logging.py:69:log_dist] [Rank 0] step=160, skipped=0, lr=[7.632e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:35,083] [INFO] [timer.py:193:stop] 0/160, SamplesPerSec=98.80338957147661, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:38,320] [INFO] [logging.py:69:log_dist] [Rank 0] step=170, skipped=0, lr=[8.112000000000001e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:38,321] [INFO] [timer.py:193:stop] 0/170, SamplesPerSec=98.82329362542731, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:41,514] [INFO] [logging.py:69:log_dist] [Rank 0] step=180, skipped=0, lr=[8.592e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:41,515] [INFO] [timer.py:193:stop] 0/180, SamplesPerSec=98.91580889243713, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:44,782] [INFO] [logging.py:69:log_dist] [Rank 0] step=190, skipped=0, lr=[9.072e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:44,782] [INFO] [timer.py:193:stop] 0/190, SamplesPerSec=98.8829499073036, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:48,005] [INFO] [logging.py:69:log_dist] [Rank 0] step=200, skipped=0, lr=[9.552000000000001e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:48,005] [INFO] [timer.py:193:stop] 0/200, SamplesPerSec=98.91881400499979, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:51,198] [INFO] [logging.py:69:log_dist] [Rank 0] step=210, skipped=0, lr=[0.00010031999999999999], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:51,199] [INFO] [timer.py:193:stop] 0/210, SamplesPerSec=98.99427407510764, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:54,423] [INFO] [logging.py:69:log_dist] [Rank 0] step=220, skipped=0, lr=[0.00010512000000000001], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:54,424] [INFO] [timer.py:193:stop] 0/220, SamplesPerSec=99.01872175740478, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:01:57,667] [INFO] [logging.py:69:log_dist] [Rank 0] step=230, skipped=0, lr=[0.00010992], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:01:57,668] [INFO] [timer.py:193:stop] 0/230, SamplesPerSec=99.01764072551768, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:00,891] [INFO] [logging.py:69:log_dist] [Rank 0] step=240, skipped=0, lr=[0.00011472000000000001], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:00,891] [INFO] [timer.py:193:stop] 0/240, SamplesPerSec=99.03979766449231, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:04,072] [INFO] [logging.py:69:log_dist] [Rank 0] step=250, skipped=0, lr=[0.00011952000000000001], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:04,073] [INFO] [timer.py:193:stop] 0/250, SamplesPerSec=99.11142440321174, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:07,275] [INFO] [logging.py:69:log_dist] [Rank 0] step=260, skipped=0, lr=[0.00012432], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:07,276] [INFO] [timer.py:193:stop] 0/260, SamplesPerSec=99.15266792195848, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:10,508] [INFO] [logging.py:69:log_dist] [Rank 0] step=270, skipped=0, lr=[0.00012912], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:10,508] [INFO] [timer.py:193:stop] 0/270, SamplesPerSec=99.15857862910184, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:13,747] [INFO] [logging.py:69:log_dist] [Rank 0] step=280, skipped=0, lr=[0.00013392], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:13,747] [INFO] [timer.py:193:stop] 0/280, SamplesPerSec=99.15602042915681, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:16,975] [INFO] [logging.py:69:log_dist] [Rank 0] step=290, skipped=0, lr=[0.00013872], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:16,976] [INFO] [timer.py:193:stop] 0/290, SamplesPerSec=99.16695420684546, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:20,220] [INFO] [logging.py:69:log_dist] [Rank 0] step=300, skipped=0, lr=[0.00014352], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:20,221] [INFO] [timer.py:193:stop] 0/300, SamplesPerSec=99.16016433706413, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:23,469] [INFO] [logging.py:69:log_dist] [Rank 0] step=310, skipped=0, lr=[0.00014832], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:23,470] [INFO] [timer.py:193:stop] 0/310, SamplesPerSec=99.14997547733194, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:26,738] [INFO] [logging.py:69:log_dist] [Rank 0] step=320, skipped=0, lr=[0.00015312], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:26,739] [INFO] [timer.py:193:stop] 0/320, SamplesPerSec=99.1204336176795, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:29,977] [INFO] [logging.py:69:log_dist] [Rank 0] step=330, skipped=0, lr=[0.00015792], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:29,977] [INFO] [timer.py:193:stop] 0/330, SamplesPerSec=99.12001735028637, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:33,231] [INFO] [logging.py:69:log_dist] [Rank 0] step=340, skipped=0, lr=[0.00016272], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:33,232] [INFO] [timer.py:193:stop] 0/340, SamplesPerSec=99.10646277731306, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:36,428] [INFO] [logging.py:69:log_dist] [Rank 0] step=350, skipped=0, lr=[0.00016752], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:36,429] [INFO] [timer.py:193:stop] 0/350, SamplesPerSec=99.14359014484413, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:39,637] [INFO] [logging.py:69:log_dist] [Rank 0] step=360, skipped=0, lr=[0.00017232], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:39,638] [INFO] [timer.py:193:stop] 0/360, SamplesPerSec=99.1705647996556, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:42,833] [INFO] [logging.py:69:log_dist] [Rank 0] step=370, skipped=0, lr=[0.00017712], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:42,834] [INFO] [timer.py:193:stop] 0/370, SamplesPerSec=99.2046242286208, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:46,089] [INFO] [logging.py:69:log_dist] [Rank 0] step=380, skipped=0, lr=[0.00018192], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:46,090] [INFO] [timer.py:193:stop] 0/380, SamplesPerSec=99.1896004839479, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:49,325] [INFO] [logging.py:69:log_dist] [Rank 0] step=390, skipped=0, lr=[0.00018672], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:49,326] [INFO] [timer.py:193:stop] 0/390, SamplesPerSec=99.1909264670834, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:52,575] [INFO] [logging.py:69:log_dist] [Rank 0] step=400, skipped=0, lr=[0.00019151999999999998], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:52,576] [INFO] [timer.py:193:stop] 0/400, SamplesPerSec=99.18084722782983, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:55,801] [INFO] [logging.py:69:log_dist] [Rank 0] step=410, skipped=0, lr=[0.00019632], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:55,802] [INFO] [timer.py:193:stop] 0/410, SamplesPerSec=99.18990813609165, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:02:59,019] [INFO] [logging.py:69:log_dist] [Rank 0] step=420, skipped=0, lr=[0.00020112], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:02:59,019] [INFO] [timer.py:193:stop] 0/420, SamplesPerSec=99.20249102372605, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:02,211] [INFO] [logging.py:69:log_dist] [Rank 0] step=430, skipped=0, lr=[0.00020592000000000003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:02,212] [INFO] [timer.py:193:stop] 0/430, SamplesPerSec=99.2334370010295, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:05,416] [INFO] [logging.py:69:log_dist] [Rank 0] step=440, skipped=0, lr=[0.00021072], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:05,416] [INFO] [timer.py:193:stop] 0/440, SamplesPerSec=99.25472042564222, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:08,656] [INFO] [logging.py:69:log_dist] [Rank 0] step=450, skipped=0, lr=[0.00021552], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:08,656] [INFO] [timer.py:193:stop] 0/450, SamplesPerSec=99.25175547865445, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:11,887] [INFO] [logging.py:69:log_dist] [Rank 0] step=460, skipped=0, lr=[0.00022032000000000003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:11,888] [INFO] [timer.py:193:stop] 0/460, SamplesPerSec=99.25199835410658, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:15,098] [INFO] [logging.py:69:log_dist] [Rank 0] step=470, skipped=0, lr=[0.00022511999999999999], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:15,098] [INFO] [timer.py:193:stop] 0/470, SamplesPerSec=99.26856439783012, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:18,339] [INFO] [logging.py:69:log_dist] [Rank 0] step=480, skipped=0, lr=[0.00022992], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:18,340] [INFO] [timer.py:193:stop] 0/480, SamplesPerSec=99.26369462282119, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:21,551] [INFO] [logging.py:69:log_dist] [Rank 0] step=490, skipped=0, lr=[0.00023472000000000003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:21,551] [INFO] [timer.py:193:stop] 0/490, SamplesPerSec=99.27805174653899, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:24,775] [INFO] [logging.py:69:log_dist] [Rank 0] step=500, skipped=0, lr=[0.00023951999999999998], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:24,775] [INFO] [timer.py:193:stop] 0/500, SamplesPerSec=99.28396141832765, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:28,019] [INFO] [logging.py:69:log_dist] [Rank 0] step=510, skipped=0, lr=[0.00024432], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:28,020] [INFO] [timer.py:193:stop] 0/510, SamplesPerSec=99.27735245160545, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:31,262] [INFO] [logging.py:69:log_dist] [Rank 0] step=520, skipped=0, lr=[0.00024912000000000003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:31,263] [INFO] [timer.py:193:stop] 0/520, SamplesPerSec=99.27209121231297, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:34,507] [INFO] [logging.py:69:log_dist] [Rank 0] step=530, skipped=0, lr=[0.00025392000000000004], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:34,508] [INFO] [timer.py:193:stop] 0/530, SamplesPerSec=99.26487166416366, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:37,720] [INFO] [logging.py:69:log_dist] [Rank 0] step=540, skipped=0, lr=[0.00025872], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:37,720] [INFO] [timer.py:193:stop] 0/540, SamplesPerSec=99.27601276693497, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:41,001] [INFO] [logging.py:69:log_dist] [Rank 0] step=550, skipped=0, lr=[0.00026352], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:41,001] [INFO] [timer.py:193:stop] 0/550, SamplesPerSec=99.2497059376896, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:44,229] [INFO] [logging.py:69:log_dist] [Rank 0] step=560, skipped=0, lr=[0.00026832], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:44,230] [INFO] [timer.py:193:stop] 0/560, SamplesPerSec=99.25323109300363, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:47,510] [INFO] [logging.py:69:log_dist] [Rank 0] step=570, skipped=0, lr=[0.00027312], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:47,510] [INFO] [timer.py:193:stop] 0/570, SamplesPerSec=99.2284016022559, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:50,706] [INFO] [logging.py:69:log_dist] [Rank 0] step=580, skipped=0, lr=[0.00027792], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:50,707] [INFO] [timer.py:193:stop] 0/580, SamplesPerSec=99.24845403992713, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:53,932] [INFO] [logging.py:69:log_dist] [Rank 0] step=590, skipped=0, lr=[0.00028272000000000003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:53,933] [INFO] [timer.py:193:stop] 0/590, SamplesPerSec=99.25280152454268, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:03:57,129] [INFO] [logging.py:69:log_dist] [Rank 0] step=600, skipped=0, lr=[0.00028752], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:03:57,130] [INFO] [timer.py:193:stop] 0/600, SamplesPerSec=99.27206818526123, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:04:00,346] [INFO] [logging.py:69:log_dist] [Rank 0] step=610, skipped=0, lr=[0.00029232], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:04:00,348] [INFO] [timer.py:193:stop] 0/610, SamplesPerSec=99.27993622676968, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:04:03,553] [INFO] [logging.py:69:log_dist] [Rank 0] step=620, skipped=0, lr=[0.00029712], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:04:03,553] [INFO] [timer.py:193:stop] 0/620, SamplesPerSec=99.29268638778709, MemAllocated=0.17GB, MaxMemAllocated=8.84GB
+slurmnode1: [2024-05-09 17:04:06,752] [INFO] [logging.py:69:log_dist] [Rank 0] step=630, skipped=0, lr=[0.00030192], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:04:06,753] [INFO] [timer.py:193:stop] 0/630, SamplesPerSec=99.3086439065609, MemAllocated=0.17GB, MaxMemAllocated=8.84GB

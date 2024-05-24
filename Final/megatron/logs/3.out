@@ -1,0 +1,411 @@
+[2024-05-09 17:16:22,698] [INFO] [runner.py:378:main] Using IP address of 172.18.0.3 for node slurmnode1
+[2024-05-09 17:16:22,698] [INFO] [multinode_runner.py:65:get_cmd] Running on the following workers: slurmnode1,slurmnode2
+[2024-05-09 17:16:22,699] [INFO] [runner.py:457:main] cmd = pdsh -f 1024 -w slurmnode1,slurmnode2 export NCCL_VERSION=2.11.4; export PYTHONPATH=/dli:/etc/assessment/; export PYTHONIOENCODING=utf-8;  cd /dli; /opt/conda/bin/python3.8 -u -m deepspeed.launcher.launch --world_info=eyJzbHVybW5vZGUxIjogWzAsIDFdLCAic2x1cm1ub2RlMiI6IFswLCAxXX0= --node_rank=%n --master_addr=172.18.0.3 --master_port=29500 /dli/minGPT/minGPT/runStep4.py --deepspeed --deepspeed_config '/dli/minGPT/minGPT/ds_config_step4.json'
+slurmnode2: [2024-05-09 17:16:24,028] [INFO] [launch.py:96:main] 1 NCCL_VERSION=2.11.4
+slurmnode2: [2024-05-09 17:16:24,028] [INFO] [launch.py:103:main] WORLD INFO DICT: {'slurmnode1': [0, 1], 'slurmnode2': [0, 1]}
+slurmnode2: [2024-05-09 17:16:24,028] [INFO] [launch.py:109:main] nnodes=2, num_local_procs=2, node_rank=1
+slurmnode2: [2024-05-09 17:16:24,028] [INFO] [launch.py:122:main] global_rank_mapping=defaultdict(<class 'list'>, {'slurmnode1': [0, 1], 'slurmnode2': [2, 3]})
+slurmnode2: [2024-05-09 17:16:24,028] [INFO] [launch.py:123:main] dist_world_size=4
+slurmnode2: [2024-05-09 17:16:24,028] [INFO] [launch.py:125:main] Setting CUDA_VISIBLE_DEVICES=0,1
+slurmnode1: [2024-05-09 17:16:24,094] [INFO] [launch.py:96:main] 0 NCCL_VERSION=2.11.4
+slurmnode1: [2024-05-09 17:16:24,095] [INFO] [launch.py:103:main] WORLD INFO DICT: {'slurmnode1': [0, 1], 'slurmnode2': [0, 1]}
+slurmnode1: [2024-05-09 17:16:24,095] [INFO] [launch.py:109:main] nnodes=2, num_local_procs=2, node_rank=0
+slurmnode1: [2024-05-09 17:16:24,095] [INFO] [launch.py:122:main] global_rank_mapping=defaultdict(<class 'list'>, {'slurmnode1': [0, 1], 'slurmnode2': [2, 3]})
+slurmnode1: [2024-05-09 17:16:24,095] [INFO] [launch.py:123:main] dist_world_size=4
+slurmnode1: [2024-05-09 17:16:24,095] [INFO] [launch.py:125:main] Setting CUDA_VISIBLE_DEVICES=0,1
+slurmnode1: [2024-05-09 17:16:25,197] [INFO] [distributed.py:48:init_distributed] Initializing torch distributed with backend: nccl
+slurmnode2: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode2: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode1: Files already downloaded and verified
+slurmnode2: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 1/8, re-initialized 4 dead clusters
+slurmnode2: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 1/8, re-initialized 4 dead clusters
+slurmnode1: done step 2/8, re-initialized 0 dead clusters
+slurmnode2: done step 2/8, re-initialized 0 dead clusters
+slurmnode2: done step 2/8, re-initialized 0 dead clusters
+slurmnode1: done step 2/8, re-initialized 0 dead clusters
+slurmnode2: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 3/8, re-initialized 0 dead clusters
+slurmnode2: done step 3/8, re-initialized 0 dead clusters
+slurmnode1: done step 3/8, re-initialized 0 dead clusters
+slurmnode2: done step 4/8, re-initialized 0 dead clusters
+slurmnode1: done step 4/8, re-initialized 0 dead clusters
+slurmnode2: done step 4/8, re-initialized 0 dead clusters
+slurmnode1: done step 4/8, re-initialized 0 dead clusters
+slurmnode2: done step 5/8, re-initialized 0 dead clusters
+slurmnode1: done step 5/8, re-initialized 0 dead clusters
+slurmnode2: done step 5/8, re-initialized 0 dead clusters
+slurmnode2: done step 6/8, re-initialized 0 dead clusters
+slurmnode1: done step 5/8, re-initialized 0 dead clusters
+slurmnode1: done step 6/8, re-initialized 0 dead clusters
+slurmnode2: done step 6/8, re-initialized 0 dead clusters
+slurmnode2: done step 7/8, re-initialized 0 dead clusters
+slurmnode1: done step 6/8, re-initialized 0 dead clusters
+slurmnode1: done step 7/8, re-initialized 0 dead clusters
+slurmnode2: done step 8/8, re-initialized 0 dead clusters
+slurmnode2: done step 7/8, re-initialized 0 dead clusters
+slurmnode1: done step 7/8, re-initialized 0 dead clusters
+slurmnode1: done step 8/8, re-initialized 0 dead clusters
+slurmnode2: done step 8/8, re-initialized 0 dead clusters
+slurmnode1: done step 8/8, re-initialized 0 dead clusters
+slurmnode1: [2024-05-09 17:16:47,019] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed info: version=0.6.5, git-hash=unknown, git-branch=unknown
+slurmnode1: [2024-05-09 17:16:49,140] [INFO] [engine.py:278:__init__] DeepSpeed Flops Profiler Enabled: False
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: Detected CUDA files, patching ldflags
+slurmnode1: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/fused_adam/build.ninja...
+slurmnode1: Building extension module fused_adam...
+slurmnode1: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode1: ninja: no work to do.
+slurmnode1: Loading extension module fused_adam...
+slurmnode1: Time to load fused_adam op: 0.045806169509887695 seconds
+slurmnode1: [2024-05-09 17:16:49,603] [INFO] [engine.py:1100:_configure_optimizer] Using DeepSpeed Optimizer param name adam as basic optimizer
+slurmnode1: [2024-05-09 17:16:49,609] [INFO] [engine.py:1108:_configure_optimizer] DeepSpeed Basic Optimizer = FusedAdam
+slurmnode1: [2024-05-09 17:16:49,609] [INFO] [logging.py:69:log_dist] [Rank 0] Creating fp16 optimizer with dynamic loss scale
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: [2024-05-09 17:16:49,619] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed Final Optimizer = adam
+slurmnode1: [2024-05-09 17:16:49,619] [INFO] [engine.py:795:_configure_lr_scheduler] DeepSpeed using client LR scheduler
+slurmnode1: [2024-05-09 17:16:49,619] [INFO] [logging.py:69:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+slurmnode1: [2024-05-09 17:16:49,619] [INFO] [logging.py:69:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0003], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:16:49,619] [INFO] [config.py:1059:print] DeepSpeedEngine configuration:
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   activation_checkpointing_config  {
+slurmnode1:     "partition_activations": true, 
+slurmnode1:     "contiguous_memory_optimization": true, 
+slurmnode1:     "cpu_checkpointing": true, 
+slurmnode1:     "number_checkpoints": 12, 
+slurmnode1:     "synchronize_checkpoint_boundary": true, 
+slurmnode1:     "profile": true
+slurmnode1: }
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   amp_enabled .................. False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   amp_params ................... False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   autotuning_config ............ {
+slurmnode1:     "enabled": false, 
+slurmnode1:     "start_step": null, 
+slurmnode1:     "end_step": null, 
+slurmnode1:     "metric_path": null, 
+slurmnode1:     "arg_mappings": null, 
+slurmnode1:     "metric": "throughput", 
+slurmnode1:     "model_info": null, 
+slurmnode1:     "results_dir": null, 
+slurmnode1:     "exps_dir": null, 
+slurmnode1:     "overwrite": true, 
+slurmnode1:     "fast": true, 
+slurmnode1:     "start_profile_step": 3, 
+slurmnode1:     "end_profile_step": 5, 
+slurmnode1:     "tuner_type": "gridsearch", 
+slurmnode1:     "tuner_early_stopping": 5, 
+slurmnode1:     "tuner_num_trials": 50, 
+slurmnode1:     "model_info_path": null, 
+slurmnode1:     "mp_size": 1, 
+slurmnode1:     "max_train_batch_size": null, 
+slurmnode1:     "min_train_batch_size": 1, 
+slurmnode1:     "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+slurmnode1:     "min_train_micro_batch_size_per_gpu": 1, 
+slurmnode1:     "num_tuning_micro_batch_sizes": 3
+slurmnode1: }
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   bfloat16_enabled ............. False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   checkpoint_tag_validation_enabled  True
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   checkpoint_tag_validation_fail  False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   communication_data_type ...... None
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   curriculum_enabled ........... False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   curriculum_params ............ False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   dataloader_drop_last ......... False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   disable_allgather ............ False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   dump_state ................... False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   dynamic_loss_scale_args ...... None
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_enabled ........... False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_gas_boundary_resolution  1
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_layer_name ........ bert.encoder.layer
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_layer_num ......... 0
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_max_iter .......... 100
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_stability ......... 1e-06
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_tol ............... 0.01
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   eigenvalue_verbose ........... False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   elasticity_enabled ........... False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   flops_profiler_config ........ {
+slurmnode1:     "enabled": false, 
+slurmnode1:     "profile_step": 1, 
+slurmnode1:     "module_depth": -1, 
+slurmnode1:     "top_modules": 1, 
+slurmnode1:     "detailed": true, 
+slurmnode1:     "output_file": null
+slurmnode1: }
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   fp16_enabled ................. True
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   fp16_master_weights_and_gradients  False
+slurmnode1: [2024-05-09 17:16:49,620] [INFO] [config.py:1063:print]   fp16_mixed_quantize .......... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   global_rank .................. 0
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   gradient_accumulation_steps .. 1
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   gradient_clipping ............ 1.0
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   gradient_predivide_factor .... 1.0
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   initial_dynamic_scale ........ 4294967296
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   loss_scale ................... 0
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   memory_breakdown ............. False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   optimizer_legacy_fusion ...... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   optimizer_name ............... adam
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   optimizer_params ............. {'lr': 0.0003}
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   pld_enabled .................. False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   pld_params ................... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   prescale_gradients ........... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_change_rate ......... 0.001
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_groups .............. 1
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_offset .............. 1000
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_period .............. 1000
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_rounding ............ 0
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_start_bits .......... 16
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_target_bits ......... 8
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_training_enabled .... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_type ................ 0
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   quantize_verbose ............. False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   scheduler_name ............... None
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   scheduler_params ............. None
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   sparse_attention ............. None
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   sparse_gradients_enabled ..... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   steps_per_print .............. 10
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   tensorboard_enabled .......... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   tensorboard_job_name ......... DeepSpeedJobName
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   tensorboard_output_path ...... 
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   train_batch_size ............. 512
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   train_micro_batch_size_per_gpu  128
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   use_quantizer_kernel ......... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   wall_clock_breakdown ......... False
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   world_size ................... 4
+slurmnode1: [2024-05-09 17:16:49,621] [INFO] [config.py:1063:print]   zero_allow_untested_optimizer  False
+slurmnode1: [2024-05-09 17:16:49,622] [INFO] [config.py:1063:print]   zero_config .................. {
+slurmnode1:     "stage": 0, 
+slurmnode1:     "contiguous_gradients": true, 
+slurmnode1:     "reduce_scatter": true, 
+slurmnode1:     "reduce_bucket_size": 5.000000e+08, 
+slurmnode1:     "allgather_partitions": true, 
+slurmnode1:     "allgather_bucket_size": 5.000000e+08, 
+slurmnode1:     "overlap_comm": false, 
+slurmnode1:     "load_from_fp32_weights": true, 
+slurmnode1:     "elastic_checkpoint": false, 
+slurmnode1:     "offload_param": null, 
+slurmnode1:     "offload_optimizer": null, 
+slurmnode1:     "sub_group_size": 1.000000e+09, 
+slurmnode1:     "prefetch_bucket_size": 5.000000e+07, 
+slurmnode1:     "param_persistence_threshold": 1.000000e+05, 
+slurmnode1:     "max_live_parameters": 1.000000e+09, 
+slurmnode1:     "max_reuse_distance": 1.000000e+09, 
+slurmnode1:     "gather_16bit_weights_on_model_save": false, 
+slurmnode1:     "ignore_unused_parameters": true, 
+slurmnode1:     "round_robin_gradients": false, 
+slurmnode1:     "legacy_stage1": false
+slurmnode1: }
+slurmnode1: [2024-05-09 17:16:49,622] [INFO] [config.py:1063:print]   zero_enabled ................. False
+slurmnode1: [2024-05-09 17:16:49,622] [INFO] [config.py:1063:print]   zero_optimization_stage ...... 0
+slurmnode1: [2024-05-09 17:16:49,622] [INFO] [config.py:1065:print]   json = {
+slurmnode1:     "train_micro_batch_size_per_gpu": 128, 
+slurmnode1:     "optimizer": {
+slurmnode1:         "type": "Adam", 
+slurmnode1:         "params": {
+slurmnode1:             "lr": 0.0003
+slurmnode1:         }
+slurmnode1:     }, 
+slurmnode1:     "gradient_clipping": 1.0, 
+slurmnode1:     "activation_checkpointing": {
+slurmnode1:         "partition_activations": true, 
+slurmnode1:         "cpu_checkpointing": true, 
+slurmnode1:         "contiguous_memory_optimization": true, 
+slurmnode1:         "number_checkpoints": 12, 
+slurmnode1:         "synchronize_checkpoint_boundary": true, 
+slurmnode1:         "profile": true
+slurmnode1:     }, 
+slurmnode1:     "fp16": {
+slurmnode1:         "enabled": true
+slurmnode1:     }
+slurmnode1: }
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Detected CUDA files, patching ldflags
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/fused_adam/build.ninja...
+slurmnode2: Building extension module fused_adam...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode1: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/utils/build.ninja...
+slurmnode1: Building extension module utils...
+slurmnode1: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module fused_adam...
+slurmnode2: Time to load fused_adam op: 0.04569053649902344 seconds
+slurmnode1: ninja: no work to do.
+slurmnode1: Loading extension module utils...
+slurmnode1: Time to load utils op: 0.04493546485900879 seconds
+slurmnode1: Loading extension module fused_adam...
+slurmnode1: Time to load fused_adam op: 0.1021127700805664 seconds
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode1: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/utils/build.ninja...
+slurmnode2: Building extension module utils...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module utils...
+slurmnode2: Time to load utils op: 0.05501699447631836 seconds
+slurmnode2: Loading extension module fused_adam...
+slurmnode2: Time to load fused_adam op: 0.20217299461364746 seconds
+slurmnode1: Loading extension module utils...
+slurmnode1: Time to load utils op: 0.10141658782958984 seconds
+slurmnode2: Using /home/admin/.cache/torch_extensions/py38_cu115 as PyTorch extensions root...
+slurmnode2: Emitting ninja build file /home/admin/.cache/torch_extensions/py38_cu115/utils/build.ninja...
+slurmnode2: Building extension module utils...
+slurmnode2: Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+slurmnode2: ninja: no work to do.
+slurmnode2: Loading extension module utils...
+slurmnode2: Time to load utils op: 0.10832405090332031 seconds
+slurmnode1: [2024-05-09 17:16:51,525] [INFO] [checkpointing.py:547:forward] Activation Checkpointing Information
+slurmnode1: [2024-05-09 17:16:51,526] [INFO] [checkpointing.py:548:forward] ----Partition Activations False, CPU CHECKPOINTING False
+slurmnode1: [2024-05-09 17:16:51,526] [INFO] [checkpointing.py:551:forward] ----contiguous Memory Checkpointing False with None total layers
+slurmnode1: [2024-05-09 17:16:51,526] [INFO] [checkpointing.py:554:forward] ----Synchronization False
+slurmnode1: [2024-05-09 17:16:51,526] [INFO] [checkpointing.py:555:forward] ----Profiling time in checkpointing False
+slurmnode1: [2024-05-09 17:16:58,061] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 0
+slurmnode1: [2024-05-09 17:16:58,061] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4294967296 to 2147483648.0
+slurmnode1: [2024-05-09 17:16:58,061] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 4294967296, reducing to 2147483648.0
+slurmnode1: [2024-05-09 17:16:58,062] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 0
+slurmnode2: [2024-05-09 17:16:58,061] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: [2024-05-09 17:16:58,062] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4294967296 to 2147483648.0
+slurmnode2: Grad overflow on iteration 0
+slurmnode2: [2024-05-09 17:16:58,062] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4294967296 to 2147483648.0
+slurmnode2: [2024-05-09 17:16:58,062] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 0
+slurmnode2: [2024-05-09 17:16:58,062] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4294967296 to 2147483648.0
+slurmnode1: [2024-05-09 17:17:02,765] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 1
+slurmnode1: [2024-05-09 17:17:02,765] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 2147483648.0 to 1073741824.0
+slurmnode2: [2024-05-09 17:17:02,765] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 1
+slurmnode2: [2024-05-09 17:17:02,766] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 2147483648.0 to 1073741824.0
+slurmnode2: [2024-05-09 17:17:02,766] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 1
+slurmnode2: [2024-05-09 17:17:02,766] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 2147483648.0 to 1073741824.0
+slurmnode1: [2024-05-09 17:17:02,766] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 1
+slurmnode1: [2024-05-09 17:17:02,766] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 2147483648.0 to 1073741824.0
+slurmnode1: [2024-05-09 17:17:02,766] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 2147483648.0, reducing to 1073741824.0
+slurmnode1: [2024-05-09 17:17:07,472] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 2
+slurmnode1: [2024-05-09 17:17:07,472] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 1073741824.0 to 536870912.0
+slurmnode2: [2024-05-09 17:17:07,472] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 2
+slurmnode2: [2024-05-09 17:17:07,472] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 1073741824.0 to 536870912.0
+slurmnode2: [2024-05-09 17:17:07,472] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 2
+slurmnode2: [2024-05-09 17:17:07,472] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 1073741824.0 to 536870912.0
+slurmnode1: [2024-05-09 17:17:07,472] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 2
+slurmnode1: [2024-05-09 17:17:07,473] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 1073741824.0 to 536870912.0
+slurmnode1: [2024-05-09 17:17:07,473] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 1073741824.0, reducing to 536870912.0
+slurmnode1: [2024-05-09 17:17:12,178] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 3
+slurmnode1: [2024-05-09 17:17:12,178] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 536870912.0 to 268435456.0
+slurmnode2: [2024-05-09 17:17:12,178] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 3
+slurmnode2: [2024-05-09 17:17:12,179] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 536870912.0 to 268435456.0
+slurmnode2: [2024-05-09 17:17:12,179] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 3
+slurmnode2: [2024-05-09 17:17:12,179] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 536870912.0 to 268435456.0
+slurmnode1: [2024-05-09 17:17:12,179] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 3
+slurmnode1: [2024-05-09 17:17:12,179] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 536870912.0 to 268435456.0
+slurmnode1: [2024-05-09 17:17:12,180] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 536870912.0, reducing to 268435456.0
+slurmnode1: [2024-05-09 17:17:16,891] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 4
+slurmnode1: [2024-05-09 17:17:16,891] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: [2024-05-09 17:17:16,891] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 4
+slurmnode1: [2024-05-09 17:17:16,891] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 268435456.0 to 134217728.0
+slurmnode1: [2024-05-09 17:17:16,891] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 268435456.0, reducing to 134217728.0
+slurmnode1: [2024-05-09 17:17:16,891] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 268435456.0 to 134217728.0
+slurmnode2: Grad overflow on iteration 4
+slurmnode2: [2024-05-09 17:17:16,891] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 268435456.0 to 134217728.0
+slurmnode2: [2024-05-09 17:17:16,891] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 4
+slurmnode2: [2024-05-09 17:17:16,892] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 268435456.0 to 134217728.0
+slurmnode1: [2024-05-09 17:17:21,597] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 5
+slurmnode1: [2024-05-09 17:17:21,598] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 134217728.0 to 67108864.0
+slurmnode1: [2024-05-09 17:17:21,598] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 134217728.0, reducing to 67108864.0
+slurmnode2: [2024-05-09 17:17:21,598] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 5
+slurmnode2: [2024-05-09 17:17:21,598] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 134217728.0 to 67108864.0
+slurmnode1: [2024-05-09 17:17:21,598] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 5
+slurmnode1: [2024-05-09 17:17:21,598] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 134217728.0 to 67108864.0
+slurmnode2: [2024-05-09 17:17:21,598] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 5
+slurmnode2: [2024-05-09 17:17:21,598] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 134217728.0 to 67108864.0
+slurmnode2: [2024-05-09 17:17:26,309] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 6
+slurmnode2: [2024-05-09 17:17:26,310] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 67108864.0 to 33554432.0
+slurmnode2: [2024-05-09 17:17:26,310] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 6
+slurmnode2: [2024-05-09 17:17:26,310] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 67108864.0 to 33554432.0
+slurmnode1: [2024-05-09 17:17:26,309] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 6
+slurmnode1: [2024-05-09 17:17:26,310] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 67108864.0 to 33554432.0
+slurmnode1: [2024-05-09 17:17:26,309] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 6
+slurmnode1: [2024-05-09 17:17:26,310] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 67108864.0, reducing to 33554432.0
+slurmnode1: [2024-05-09 17:17:26,310] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 67108864.0 to 33554432.0
+slurmnode2: [2024-05-09 17:17:31,026] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 7
+slurmnode2: [2024-05-09 17:17:31,027] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 33554432.0 to 16777216.0
+slurmnode1: [2024-05-09 17:17:31,026] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 7
+slurmnode1: [2024-05-09 17:17:31,027] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 33554432.0 to 16777216.0
+slurmnode1: [2024-05-09 17:17:31,027] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 7
+slurmnode1: [2024-05-09 17:17:31,027] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 33554432.0 to 16777216.0
+slurmnode1: [2024-05-09 17:17:31,027] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 33554432.0, reducing to 16777216.0
+slurmnode2: [2024-05-09 17:17:31,027] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 7
+slurmnode2: [2024-05-09 17:17:31,027] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 33554432.0 to 16777216.0
+slurmnode2: [2024-05-09 17:17:35,748] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 8
+slurmnode2: [2024-05-09 17:17:35,748] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 16777216.0 to 8388608.0
+slurmnode1: [2024-05-09 17:17:35,748] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 8
+slurmnode1: [2024-05-09 17:17:35,748] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 16777216.0 to 8388608.0
+slurmnode2: [2024-05-09 17:17:35,749] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 8
+slurmnode1: [2024-05-09 17:17:35,749] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 8
+slurmnode1: [2024-05-09 17:17:35,749] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 16777216.0 to 8388608.0
+slurmnode1: [2024-05-09 17:17:35,749] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 16777216.0, reducing to 8388608.0
+slurmnode2: [2024-05-09 17:17:35,749] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 16777216.0 to 8388608.0
+slurmnode2: [2024-05-09 17:17:40,468] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 9
+slurmnode1: [2024-05-09 17:17:40,468] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 9
+slurmnode1: [2024-05-09 17:17:40,468] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 9
+slurmnode1: [2024-05-09 17:17:40,468] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 8388608.0 to 4194304.0
+slurmnode2: [2024-05-09 17:17:40,468] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 8388608.0 to 4194304.0
+slurmnode1: [2024-05-09 17:17:40,468] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 8388608.0 to 4194304.0
+slurmnode1: [2024-05-09 17:17:40,468] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 8388608.0, reducing to 4194304.0
+slurmnode2: [2024-05-09 17:17:40,468] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 9
+slurmnode2: [2024-05-09 17:17:40,469] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 8388608.0 to 4194304.0
+slurmnode1: [2024-05-09 17:17:40,469] [INFO] [logging.py:69:log_dist] [Rank 0] step=10, skipped=10, lr=[6.912e-05], mom=[(0.9, 0.999)]
+slurmnode1: [2024-05-09 17:17:40,469] [INFO] [timer.py:193:stop] 0/10, SamplesPerSec=108.65382223245524, MemAllocated=0.28GB, MaxMemAllocated=9.49GB
+slurmnode1: [2024-05-09 17:17:45,191] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 10
+slurmnode1: [2024-05-09 17:17:45,191] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4194304.0 to 2097152.0
+slurmnode1: [2024-05-09 17:17:45,191] [INFO] [logging.py:69:log_dist] [Rank 0] Overflow detected. Skipping step. Attempted loss scale: 4194304.0, reducing to 2097152.0
+slurmnode2: [2024-05-09 17:17:45,191] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 10
+slurmnode2: [2024-05-09 17:17:45,191] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4194304.0 to 2097152.0
+slurmnode1: [2024-05-09 17:17:45,192] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode1: Grad overflow on iteration 10
+slurmnode1: [2024-05-09 17:17:45,192] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4194304.0 to 2097152.0
+slurmnode2: [2024-05-09 17:17:45,191] [INFO] [fused_optimizer.py:382:_update_scale] 
+slurmnode2: Grad overflow on iteration 10
+slurmnode2: [2024-05-09 17:17:45,192] [INFO] [fused_optimizer.py:383:_update_scale] Reducing dynamic loss scale from 4194304.0 to 2097152.0
